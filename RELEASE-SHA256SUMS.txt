@@ -1,0 +1,2 @@
+ea86d837c2d944360d770dd9b2d80a00192d31d2f52a4a0dc11f51937430cb6b  EasyKiConverterPlus-Windows-x64.zip
+6e6309a00f9dedf2b79c6d24a544635153c13e625b53be780d109bfabad2cb19  EasyKiConverterPlus-source-20261114.zip

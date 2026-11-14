@@ -1,0 +1,153 @@
+pragma Singleton
+import QtQuick
+
+QtObject {
+    // 深色模式状态
+    property bool isDarkMode: false
+    // 颜色主题
+    readonly property var colors: QtObject {
+        readonly property color primary: "#3b82f6"
+        readonly property color primaryHover: "#2563eb"
+        readonly property color primaryPressed: "#1e40af"
+        readonly property color success: "#22c55e"
+        readonly property color successLight: "#dcfce7"
+        readonly property color successDark: "#166534"
+        readonly property color warning: "#f59e0b"
+        readonly property color warningLight: "#fef3c7"
+        readonly property color warningDark: "#92400e"
+        readonly property color danger: "#ef4444"
+        readonly property color dangerLight: "#fee2e2"
+        readonly property color dangerDark: "#991b1b"
+        readonly property color info: isDarkMode ? "#3b82f6" : "#3b82f6"
+        readonly property color infoLight: isDarkMode ? "#1e3b60" : "#d4e6ff"
+        readonly property color infoSurface: isDarkMode ? "#12243a" : "#e8f2ff"
+        readonly property color infoBorder: isDarkMode ? "#29507d" : "#9bc0ff"
+        readonly property color background: isDarkMode ? "#0f172a" : "#f8fafc"
+        readonly property color surface: isDarkMode ? "#1e293b" : "#ffffff"
+        readonly property color textPrimary: isDarkMode ? "#f1f5f9" : "#1e293b"
+        readonly property color textSecondary: isDarkMode ? "#94a3b8" : "#64748b"
+        readonly property color textDisabled: isDarkMode ? "#64748b" : "#cbd5e1"
+        readonly property color border: isDarkMode ? "#334155" : "#e2e8f0"
+        readonly property color borderHover: isDarkMode ? "#475569" : "#cbd5e1"
+        readonly property color borderFocus: "#3b82f6"
+        readonly property color textOnPrimary: "#ffffff"
+        readonly property color overlay: "#CC000000"
+    }
+    // 字体大小
+    readonly property var fontSizes: QtObject {
+        readonly property int xxs: 9
+        readonly property int xs: 12
+        readonly property int sm: 14
+        readonly property int md: 16
+        readonly property int lg: 18
+        readonly property int xl: 20
+        readonly property int xxl: 24
+        readonly property int xxxl: 32
+        readonly property int display: 48
+    }
+    // 间距
+    readonly property var spacing: QtObject {
+        readonly property int xs: 4
+        readonly property int sm: 8
+        readonly property int md: 12
+        readonly property int lg: 16
+        readonly property int xl: 20
+        readonly property int xxl: 24
+        readonly property int xxxl: 30
+        readonly property int huge: 40
+    }
+    // 圆角
+    readonly property var radius: QtObject {
+        readonly property int xs: 4
+        readonly property int sm: 6
+        readonly property int md: 8
+        readonly property int lg: 12
+        readonly property int xl: 16
+        readonly property int xxl: 18
+    }
+    // 遮罩层颜色（主题相关）
+    readonly property var overlayMask: QtObject {
+        readonly property color dark: "#000000"
+        readonly property color light: "#ffffff"
+        readonly property real opacityDark: 0.3
+        readonly property real opacityLight: 0.5
+    }
+    // 边框宽度
+    readonly property var borderWidths: QtObject {
+        readonly property real thin: 1
+        readonly property real normal: 1.5
+        readonly property real thick: 2
+    }
+    // 阴影
+    readonly property var shadows: QtObject {
+        readonly property var sm: QtObject {
+            readonly property int horizontalOffset: 0
+            readonly property int verticalOffset: 1
+            readonly property int radius: 4
+            readonly property int samples: 9
+            readonly property color color: isDarkMode ? "#0000004d" : "#0000000d"
+        }
+        readonly property var md: QtObject {
+            readonly property int horizontalOffset: 0
+            readonly property int verticalOffset: 2
+            readonly property int radius: 8
+            readonly property int samples: 17
+            readonly property color color: isDarkMode ? "#00000066" : "#0000001a"
+        }
+        readonly property var lg: QtObject {
+            readonly property int horizontalOffset: 0
+            readonly property int verticalOffset: 4
+            readonly property int radius: 12
+            readonly property int samples: 25
+            readonly property color color: isDarkMode ? "#00000080" : "#00000026"
+        }
+    }
+    // 动画时长
+    readonly property var durations: QtObject {
+        readonly property int fast: 150
+        readonly property int normal: 300
+        readonly property int slow: 500
+        readonly property int themeSwitch: 600  // 主题切换动画时长
+    }
+    // 交互节奏
+    readonly property var interactions: QtObject {
+        // 轻反馈（颜色/边框）可即时触发，重反馈（缩放/浮层/滑块/强阴影）使用 hover intent 延迟。
+        readonly property int hoverIntentDelay: 180
+        readonly property int sliderIntentDelay: 55
+        readonly property int previewIntentDelay: 300
+        readonly property int popupHideDelay: 100
+        readonly property int safeCursorGap: 15
+    }
+    // 缓动函数
+    readonly property var easings: QtObject {
+        readonly property int easeOut: Easing.OutCubic
+        readonly property int easeIn: Easing.InCubic
+        readonly property int easeInOut: Easing.InOutCubic
+    }
+    // 控件基础尺寸
+    readonly property var sizes: QtObject {
+        readonly property int checkbox: 22
+        readonly property int radioButton: 20
+        readonly property int radioButtonIndicator: 10
+        readonly property int statusIcon: 26
+    }
+    // 图标颜色
+    readonly property var iconColors: QtObject {
+        readonly property color primary: isDarkMode ? "#f1f5f9" : "#1e293b"
+        readonly property color secondary: isDarkMode ? "#94a3b8" : "#64748b"
+        readonly property color disabled: isDarkMode ? "#64748b" : "#cbd5e1"
+    }
+    // 标题栏专用
+    readonly property var titleBar: QtObject {
+        readonly property int fontSize: 13
+        readonly property color hoverOverlayDark: "#1affffff"
+        readonly property color hoverOverlayLight: "#1a000000"
+        readonly property color closeButton: "#c42b1c"
+    }
+    // 透明度
+    readonly property var opacities: QtObject {
+        readonly property real subtle: 0.3
+        readonly property real light: 0.5
+        readonly property real medium: 0.8
+    }
+}

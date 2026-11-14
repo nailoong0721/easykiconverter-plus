@@ -1,0 +1,46 @@
+{
+  "uuid": "symbol-uuid",
+  "title": "Golden Symbol Fixture",
+  "description": "Basic symbol fixture",
+  "docType": 2,
+  "type": 1,
+  "SMT": true,
+  "updateTime": 1700000000,
+  "updated_at": "2024-01-01T00:00:00Z",
+  "lcsc": {
+    "url": "https://example.test/datasheet.pdf"
+  },
+  "dataStr": {
+    "BBox": {
+      "x": 0,
+      "y": 0,
+      "width": 120,
+      "height": 80
+    },
+    "head": {
+      "editorVersion": "6.5.0",
+      "puuid": "project-uuid",
+      "utime": 1700000001,
+      "importFlag": true,
+      "hasIdFlag": true,
+      "c_para": {
+        "name": "FIXTURE_SYMBOL",
+        "pre": "U",
+        "package": "FIXTURE_FOOTPRINT",
+        "Manufacturer": "Fixture Inc",
+        "Supplier Part": "C12345",
+        "Supplier": "LCSC",
+        "Manufacturer Part": "FIX-123",
+        "JLCPCB Part Class": "Basic"
+      }
+    },
+    "shape": [
+      "R~0~0~4~6~60~40~#000000~1~dashed~none~rect1~0",
+      "PT~M 0 0 C 0 10 10 10 10 0 L 20 0 Q 25 5 30 0 A 5 5 0 0 0 40 0 A 10 5 0 0 0 60 0 A 10 5 30 0 1 70 10~#000000~1~solid~0~path1~0",
+      "A~M 0 0 A 10 10 0 0 0 20 0~#000000~1~solid~none~arc1~0",
+      "I~10~20~20~10~0~data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=~0",
+      "T~30~40~0~#112233~Arial~7~1~0~0~alphabetic~comment~LABEL~1~start~text1~0",
+      "P~show~1~1~10~20~0~pin1~0^^10~20^^M 10 20 h 20~#000000^^show~14~20~0~VCC~start~Arial~7^^hide~0~0~~1^^unused^^hide~"
+    ]
+  }
+}
